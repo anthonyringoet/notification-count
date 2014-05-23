@@ -1,0 +1,31 @@
+{
+  "name": "notification-count",
+  "version": "0.0.0",
+  "description": "Keep track of notifications in your title",
+  "author": {
+    "name": "Anthony Ringoet",
+    "email": "anthonyringoet@gmail.com",
+    "url": "http://anthonyringoet.be"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test/*.js | testling",
+    "watch-example": "watchify example/main.js -d -o example/bundle.js -v",
+    "serve-example": "http-server example"
+  },
+  "keywords": [
+    "notification",
+    "browserify",
+    "browser",
+    "activity"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "watchify": "^0.10.1",
+    "browserify": "^4.1.5",
+    "http-server": "^0.6.1",
+    "tape": "^2.13.1",
+    "prova": "^1.9.0",
+    "testling": "^1.6.1"
+  }
+}

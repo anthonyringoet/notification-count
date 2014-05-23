@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>notification-count</title>
+  <style>
+    body{
+      font-family:sans-serif;
+    }
+    button, input{
+      font-size:4em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Notification count example page</h1>
+
+  <h2>Increment/decrement</h2>
+  <button id="n-more">+1</button>
+  <button id="n-less">-1</button>
+  <button id="n-default">default</button>
+
+  <h2>Increment/decrement by a set value</h2>
+  <form id="n-form">
+    <input class="n-exact" type="number" value="9" />
+    <input class="n-submit" type="submit" value="set value" />
+  </form>
+
+  <h2>Set a specific value</h2>
+  <form id="n-form-specific-more">
+    <input class="n-exact" type="number" value="5" />
+    <input class="n-submit" type="submit" value="+" />
+  </form>
+
+  <form id="n-form-specific-less">
+    <input class="n-exact" type="number" value="5" />
+    <input class="n-submit" type="submit" value="-" />
+  </form>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
