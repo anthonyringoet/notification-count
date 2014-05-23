@@ -90,3 +90,12 @@ test('calling with wrong arguments', function (t) {
 
     t.end();
 });
+
+test('methods can be chained', function (t) {
+    t.plan(1);
+
+    var foo = Notifier();
+    foo.set(5).add().add().add().subtract();
+
+    t.equal(foo.count, 7);
+});
