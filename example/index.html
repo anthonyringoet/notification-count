@@ -11,6 +11,11 @@
     button, input{
       font-size:4em;
     }
+    .c-status{
+      display: block;
+      padding:1em;
+      outline:1px solid;
+    }
   </style>
 </head>
 <body>
@@ -37,6 +42,10 @@
     <input class="n-exact" type="number" value="5" />
     <input class="n-submit" type="submit" value="-" />
   </form>
+
+  <h2>Custom element</h2>
+  <span class="c-status">I want notifications!</span>
+  <button id="c-more-custom-el">+1</button>
 
   <script src="bundle.js"></script>
 </body>

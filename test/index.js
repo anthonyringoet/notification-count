@@ -45,10 +45,17 @@ test('subtract method', function (t) {
 test('set method', function (t) {
     t.plan(1);
 
+    var foo = Notifier();
+    foo.set(35);
+    t.equal(foo.count, 35, 'set method adds the param');
 });
 
-test('set method', function (t) {
+test('default method', function (t) {
     t.plan(1);
 
+    var foo = Notifier(100);
+    foo.default();
+
+    t.equal(foo.count, foo.initial, 'set method adds the param');
 });
 

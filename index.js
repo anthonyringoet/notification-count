@@ -7,27 +7,31 @@ function Notifier(count, el, left, right){
 
   this.separatorLeft = left || '(';
   this.separatorRight = right || ')';
+  this.initial = count || 0;
   this.count = count || 0;
   this.el = el || document.getElementsByTagName('title')[0];
+
+  if(this.initial){
+    this.update();
+  }
 }
 
 Notifier.prototype.update = function() {
   var output = this.separatorLeft + this.count + this.separatorRight;
-  var title = document.title;
-  var left = title.indexOf(this.separatorLeft);
-  var right = title.lastIndexOf(this.separatorRight);
+  var left = this.el.textContent.indexOf(this.separatorLeft);
+  var right = this.el.textContent.lastIndexOf(this.separatorRight);
 
-  if(!this.count){
-    document.title = document.title.substr(right + 2);
+  if(!this.count && right != -1){
+    this.el.textContent = this.el.textContent.substr(right + 2);
     return;
   }
 
   if(left == -1 && right == -1){
-    document.title = output + ' ' + title;
+    this.el.textContent = output + ' ' + this.el.textContent;
   }
   else{
-    var oldTitle = document.title.substr(right + 2);
-    document.title = output + ' ' + oldTitle;
+    var oldTitle = this.el.textContent.substr(right + 2);
+    this.el.textContent = output + ' ' + oldTitle;
   }
 }
 
@@ -39,11 +43,15 @@ Notifier.prototype.set = function(input){
     this.count = parseFloat(input);
   }
 
+  if(this.count < 0 || isNaN(this.count)){
+    this.count = 0;
+  }
+
   this.update();
 };
 
 Notifier.prototype.default = function(input){
-  this.count = 0;
+  this.count = this.initial;
   this.update();
 }
 
@@ -63,7 +71,7 @@ Notifier.prototype.subtract = function(input){
 
   this.count -= parseFloat(input);
 
-  if(this.count < 0){
+  if(this.count < 0 || isNaN(this.count)){
     this.count = 0;
   }
 

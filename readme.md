@@ -1,16 +1,16 @@
 # notification-count
 
-Keep track of notifications in your title
+Keep track of notifications in your title (or an element of your choice if you please)
 
 ```
 var N = require('notification-count');
 
 // create instance
 // optional arguments:
-// - count
-// - el
-// - left
-// - right
+// - count = default count
+// - el = element to show the notifications, defaults to document.title
+// - left = left separator, default to '('
+// - right = right separator, default to ')'
 
 var n = new N();
 
