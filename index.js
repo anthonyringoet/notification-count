@@ -33,6 +33,8 @@ Notifier.prototype.update = function() {
     var oldTitle = this.el.textContent.substr(right + 2);
     this.el.textContent = output + ' ' + oldTitle;
   }
+
+  return this;
 }
 
 Notifier.prototype.set = function(input){
@@ -48,11 +50,15 @@ Notifier.prototype.set = function(input){
   }
 
   this.update();
+
+  return this;
 };
 
 Notifier.prototype.default = function(){
   this.count = this.initial;
   this.update();
+
+  return this;
 }
 
 Notifier.prototype.add = function(input){
@@ -62,6 +68,8 @@ Notifier.prototype.add = function(input){
 
   this.count += parseFloat(input);
   this.update();
+
+  return this;
 }
 
 Notifier.prototype.subtract = function(input){
@@ -76,4 +84,6 @@ Notifier.prototype.subtract = function(input){
   }
 
   this.update();
+
+  return this;
 }

@@ -37,5 +37,5 @@ var c = new N(15, doc.querySelector('.c-status'));
 
 doc.getElementById('c-more-custom-el').addEventListener('click', function(e){
   e.preventDefault();
-  c.add();
+  c.add().add().add().add().add();
 });
