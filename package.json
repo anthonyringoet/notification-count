@@ -11,7 +11,8 @@
   "scripts": {
     "test": "browserify test/*.js | testling",
     "watch-example": "watchify example/main.js -d -o example/bundle.js -v",
-    "serve-example": "http-server example"
+    "serve-example": "http-server example",
+    "prova": "prova test/*.js -b"
   },
   "keywords": [
     "notification",

@@ -59,3 +59,34 @@ test('default method', function (t) {
     t.equal(foo.count, foo.initial, 'set method adds the param');
 });
 
+test('calling with wrong arguments', function (t) {
+    var bar = Notifier();
+
+
+    t.doesNotThrow(function(){
+      bar.add('a string');
+    }, '', 'add method does not throw error when given a string');
+
+    t.doesNotThrow(function(){
+      bar.subtract('a string');
+    }, '', 'subtract method does not throw error when given a string');
+
+    t.doesNotThrow(function(){
+      bar.set('a string');
+    }, '', 'set method does not throw error when given a string');
+
+    t.doesNotThrow(function(){
+      bar.add([]);
+    }, '', 'add method does not throw error when given an array');
+
+    t.doesNotThrow(function(){
+      bar.subtract([]);
+    }, '', 'subtract method does not throw error when given an array');
+
+    t.doesNotThrow(function(){
+      bar.set([]);
+    }, '', 'set method does not throw error when given an array');
+
+
+    t.end();
+});

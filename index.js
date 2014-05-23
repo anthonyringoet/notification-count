@@ -50,7 +50,7 @@ Notifier.prototype.set = function(input){
   this.update();
 };
 
-Notifier.prototype.default = function(input){
+Notifier.prototype.default = function(){
   this.count = this.initial;
   this.update();
 }
