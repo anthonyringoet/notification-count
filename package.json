@@ -2,6 +2,8 @@
   "name": "notification-count",
   "version": "0.0.1",
   "description": "Keep track of notifications in your title (or somewhere else)",
+  "homepage": "https://github.com/anthonyringoet/notification-count",
+  "bugs": "https://github.com/anthonyringoet/notification-count/issues",
   "author": {
     "name": "Anthony Ringoet",
     "email": "anthonyringoet@gmail.com",
@@ -14,6 +16,10 @@
     "watch-example": "watchify example/main.js -d -o example/bundle.js -v",
     "serve-example": "http-server example",
     "prova": "prova test/*.js -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonyringoet/notification-count"
   },
   "testling": {
     "files": "test/*.js",
