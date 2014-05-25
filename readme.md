@@ -1,6 +1,6 @@
 # notification-count
 
-Dependency free helper to keep track of notifications in your title (or your preferred element).
+Lightweight helper to keep track of notifications in your title (or your preferred element).
 
 ```
 var N = require('notification-count');
