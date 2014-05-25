@@ -18,7 +18,7 @@ function Notifier(count, el, left, right){
 
 Notifier.prototype.update = function() {
   var output = this.separatorLeft + this.count + this.separatorRight;
-  var oldTitle = this.el.textContent.replace(/^([(])\w+([)])/g, '');
+  var oldTitle = this.el.textContent.replace(/^([(])\w+([)] )/g, '');
 
   if(this.count){
     this.el.textContent = output + ' ' + oldTitle;
