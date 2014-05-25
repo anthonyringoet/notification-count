@@ -110,14 +110,3 @@ test('title can have separators it the content', function (t) {
 
     t.equal(document.title, '(1) some foobar t(3)xt');
 });
-
-
-// test('separators can be same character', function (t) {
-//     t.plan(1);
-
-//     document.title = 'same separators test';
-//     var foo = Notifier(0, document.querySelectorAll('title')[0], '|', '|');
-//     foo.add();
-
-//     t.equal(document.title, '|1| same separators test');
-// });
