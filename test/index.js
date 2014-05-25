@@ -11,24 +11,6 @@ test('constructor should work with or without new', function (t) {
     t.equal(two instanceof Notifier, true);
 });
 
-// test('update method', function (t) {
-//     t.plan(1);
-
-//     var el = document.createElement('span');
-//     el.id = 'foo';
-//     el.textContent = 'foobar';
-//     document.body.appendChild(el);
-//     var domNode = document.querySelectorAll('#foo')[0];
-
-//     var foo = Notifier(15, domNode);
-
-
-//     console.log(domNode.textContent);
-
-//     t.equal(node.textContent, '(15)');
-// });
-
-
 test('add method', function (t) {
     t.plan(2);
 
