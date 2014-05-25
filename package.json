@@ -9,7 +9,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "browserify test/*.js | testling",
+    "test": "tape test/*.js",
+    "test-local": "browserify test/*.js | testling",
     "watch-example": "watchify example/main.js -d -o example/bundle.js -v",
     "serve-example": "http-server example",
     "prova": "prova test/*.js -b"
