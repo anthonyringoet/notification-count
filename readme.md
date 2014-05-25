@@ -2,6 +2,9 @@
 
 Lightweight helper to keep track of notifications in your title (or your preferred element).
 
+[![browser support](https://ci.testling.com/anthonyringoet/notification-count.png)
+](https://ci.testling.com/anthonyringoet/notification-count)
+
 ```
 var N = require('notification-count');
 
