@@ -18,20 +18,13 @@ function Notifier(count, el, left, right){
 
 Notifier.prototype.update = function() {
   var output = this.separatorLeft + this.count + this.separatorRight;
-  var left = this.el.textContent.indexOf(this.separatorLeft);
-  var right = this.el.textContent.lastIndexOf(this.separatorRight);
+  var oldTitle = this.el.textContent.replace(/^([(])\w+([)])/g, '');
 
-  if(!this.count && right != -1){
-    this.el.textContent = this.el.textContent.substr(right + 2);
-    return;
-  }
-
-  if(left == -1 && right == -1){
-    this.el.textContent = output + ' ' + this.el.textContent;
+  if(this.count){
+    this.el.textContent = output + ' ' + oldTitle;
   }
   else{
-    var oldTitle = this.el.textContent.substr(right + 2);
-    this.el.textContent = output + ' ' + oldTitle;
+    this.el.textContent = oldTitle;
   }
 
   return this;
