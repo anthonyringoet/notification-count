@@ -5,6 +5,13 @@ Lightweight helper to keep track of notifications in your title (or your preferr
 [![browser support](https://ci.testling.com/anthonyringoet/notification-count.png)
 ](https://ci.testling.com/anthonyringoet/notification-count)
 
+## Install
+
+```
+npm install notification-count
+```
+
+## Api
 ```
 var N = require('notification-count');
 
