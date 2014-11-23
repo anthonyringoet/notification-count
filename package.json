@@ -1,6 +1,6 @@
 {
   "name": "notification-count",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Keep track of notifications in your title (or somewhere else)",
   "homepage": "https://github.com/anthonyringoet/notification-count",
   "bugs": "https://github.com/anthonyringoet/notification-count/issues",

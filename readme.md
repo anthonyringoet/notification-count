@@ -2,6 +2,8 @@
 
 Lightweight helper to keep track of notifications in your title (or your preferred element).
 
+[Demo](https://anthonyringoet.github.io/notification-count/example/)
+
 ![visual](visual.gif)
 
 [![browser support](https://ci.testling.com/anthonyringoet/notification-count.png)
