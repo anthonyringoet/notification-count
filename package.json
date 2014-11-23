@@ -14,7 +14,7 @@
     "test": "tape test/*.js",
     "test-local": "browserify test/*.js | testling",
     "watch-example": "http-server & watchify example/main.js -d -o example/bundle.js -v",
-    "build-example-js": "browserify example/main.js -o example/bundle.js && uglifyjs example/main.js -c -o example/main.js",
+    "build-example-js": "browserify example/main.js -o example/bundle.js && uglifyjs example/bundle.js -c -o example/bundle.js",
     "prova": "prova test/*.js -b"
   },
   "repository": {
