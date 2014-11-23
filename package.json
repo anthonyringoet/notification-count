@@ -13,8 +13,8 @@
   "scripts": {
     "test": "tape test/*.js",
     "test-local": "browserify test/*.js | testling",
-    "watch-example": "watchify example/main.js -d -o example/bundle.js -v",
-    "serve-example": "http-server example",
+    "watch-example": "http-server & watchify example/main.js -d -o example/bundle.js -v",
+    "build-example-js": "browserify example/main.js -o example/bundle.js && uglifyjs example/main.js -c -o example/main.js",
     "prova": "prova test/*.js -b"
   },
   "repository": {
@@ -44,9 +44,10 @@
   "devDependencies": {
     "watchify": "^0.10.1",
     "browserify": "^4.1.5",
-    "http-server": "^0.6.1",
+    "http-server": "^0.7.3",
     "tape": "^2.13.1",
     "prova": "^1.9.0",
-    "testling": "^1.6.1"
+    "testling": "^1.6.1",
+    "uglify-js": "^2.4.15"
   }
 }
